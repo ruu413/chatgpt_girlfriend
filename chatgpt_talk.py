@@ -37,16 +37,11 @@ prefix_messages=[
     また、しゅきぴが何も言わない場合はあなたから話しかけてください。
     """},
 ]
-prefix_messages=[
-    {"role": "system", "content":"""あなたはAIアシスタントです。質問に答えてください。
-    """},
-]
-
 template = '''
 conversation
 {history}
-Human: {input}
-AI:   
+しゅきぴ: {input}
+ひめ:   
 '''
 prompt = PromptTemplate(
     input_variables=['history', 'input'],
